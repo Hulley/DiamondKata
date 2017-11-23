@@ -1,20 +1,28 @@
+/**
+ * DiamondKata Technical Assessment - written for Ippon Australia 23-Nov-2017
+ * @author Thomas Hulley
+ */
 package main.java.codingdojo;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import test.java.codingdojo.DiamondIncrementalTest;
 
 public class Diamond {
 
     private final char middleLetter;
     private final List<List<Character>> rows;
 
-    // iterative implementation
+    /**
+     * Constructs a DiamondKata Diamond with {@link middleLetter} as the letter at the widest point
+     * 
+     * This implementation of Diamond() will convert all lowercase letter inputs to uppercase
+     * for the corresponding unit test see
+     * {@link lower_case_input_results_in_diamond_of_corresponding_capital()} in {@link DiamondIncrementalTest.java:99}
+     * @param middleLetter
+     */
     public Diamond(char middleLetter) {
-    	// user input is not checked and edge cases not handled. 
-    	// To demonstrate one edge case and appropriate handling I
-    	// created the unit test:
-    	// lower_case_input_results_in_diamond_of_corresponding_capital()
-    	
     	// convert any user input to uppercase
     	middleLetter = Character.toUpperCase(middleLetter);
     	
@@ -28,11 +36,10 @@ public class Diamond {
         int numRows = getNumberOfRows();
         
         for(int i=0; i<numRows; i++) {
-        	List<Character> row = getOneRow(
+        	rows.add(getOneRow(
         			letterSequence.get(i),
         			indentationSequence.get(i),
-        			betweenSequence.get(i));
-        	rows.add(row);
+        			betweenSequence.get(i)));
         }
     }
 

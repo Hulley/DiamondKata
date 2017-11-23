@@ -97,10 +97,10 @@ public class DiamondIncrementalTest {
 
     @Test
     public void lower_case_input_results_in_diamond_of_corresponding_capital() {
-    	assertDiamondsEqual(new Diamond('a').getRows(), new Diamond('A').getRows());
-    	assertDiamondsEqual(new Diamond('b').getRows(), new Diamond('B').getRows());
-    	assertDiamondsEqual(new Diamond('c').getRows(), new Diamond('C').getRows());
-    	assertDiamondsEqual(new Diamond('d').getRows(), new Diamond('D').getRows());
+    	assertDiamondsEqual(new Diamond('A').getRows(), new Diamond('a').getRows());
+    	assertDiamondsEqual(new Diamond('B').getRows(), new Diamond('b').getRows());
+    	assertDiamondsEqual(new Diamond('C').getRows(), new Diamond('c').getRows());
+    	assertDiamondsEqual(new Diamond('D').getRows(), new Diamond('d').getRows());
 
     }
     public void assertDiamondsEqual(List<List<Character>> first_d, List<List<Character>> second_d) {
