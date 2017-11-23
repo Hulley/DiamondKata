@@ -1,7 +1,9 @@
-package codingdojo;
+package test.java.codingdojo;
 
 import org.junit.Ignore;
 import org.junit.Test;
+
+import main.java.codingdojo.Diamond;
 
 import static org.junit.Assert.assertEquals;
 
@@ -80,13 +82,11 @@ public class DiamondIterativeTest {
                      "  A", Diamond.print('C'));
     }
 
-    @Ignore
     @Test
     public void DiamondB_has_a_space_between_the_Bs() {
         assertEquals(" A\nB B\n A", Diamond.print('B'));
     }
 
-    @Ignore
     @Test
     public void DiamondC_has_between_spaces_on_all_rows_except_first_and_last() {
         assertEquals("  A\n" +
@@ -96,7 +96,6 @@ public class DiamondIterativeTest {
                      "  A", Diamond.print('C'));
     }
 
-    @Ignore
     @Test
     public void DiamondD_is_correct_in_all_aspects() {
         assertEquals("   A\n" +
