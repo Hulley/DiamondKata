@@ -16,7 +16,7 @@ At that point you should have a working implementation.
 
 import diamond
 
- 
+
 def test_DiamondA_has_one_line_containing_A():
 	assert diamond.Diamond('A').print_diamond() == "A"
 
@@ -54,10 +54,10 @@ CC
  BB
   A"""
 
-def ignore_DiamondB_has_a_space_between_the_two_Bs():
+def test_DiamondB_has_a_space_between_the_two_Bs():
 	assert diamond.Diamond('B').print_diamond() == " A\nB B\n A"
- 
-def ignore_DiamondC_has_spaces_on_middle_rows():
+
+def test_DiamondC_has_spaces_on_middle_rows():
 	assert diamond.Diamond('C').print_diamond() == """\
   A
  B B
@@ -65,7 +65,7 @@ C   C
  B B
   A"""
 
-def ignore_DiamondD_is_correct():
+def test_DiamondD_is_correct():
 	assert diamond.Diamond('D').print_diamond() == """\
    A
   B B
